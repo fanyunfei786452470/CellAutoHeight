@@ -40,8 +40,8 @@
         [self.contentView addSubview:self.headerImage];
         
         [self.headerImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(20);
-            make.left.mas_equalTo(20);
+            make.top.mas_equalTo(15);
+            make.left.mas_equalTo(10);
             make.size.mas_equalTo(CGSizeMake(50, 50));
         }];
         
@@ -70,7 +70,7 @@
         self.mainLabel.numberOfLines = 0;
         [self.mainLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(10);
-            make.top.mas_equalTo(self.headerImage.mas_bottom).offset(20);
+            make.top.mas_equalTo(self.headerImage.mas_bottom).offset(15);
             make.right.mas_equalTo(-10);
             //      make.height.mas_lessThanOrEqualTo(80);
         }];
@@ -123,23 +123,23 @@
         [self.collect mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.descLabel.mas_bottom).offset(15);
             make.left.mas_equalTo(10);
-            make.size.mas_equalTo(CGSizeMake(20, 20));
+            make.size.mas_equalTo(CGSizeMake(50, 20));
         }];
         self.comment = [[UIButton alloc]init];
         self.comment.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:self.comment];
         [self.comment mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.descLabel.mas_bottom).offset(15);
-            make.left.mas_equalTo(self.collect.mas_right).offset(20);
-            make.size.mas_equalTo(CGSizeMake(20, 20));
+            make.centerX.mas_equalTo(self.mas_centerX);
+            make.size.mas_equalTo(CGSizeMake(50, 20));
         }];
         self.like = [[UIButton alloc]init];
         self.like.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:self.like];
         [self.like mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.descLabel.mas_bottom).offset(15);
-            make.left.mas_equalTo(self.comment.mas_right).offset(20);
-            make.size.mas_equalTo(CGSizeMake(20, 20));
+            make.right.mas_equalTo(-10);
+            make.size.mas_equalTo(CGSizeMake(50, 20));
         }];
         //
         self.fyf_bottomOffsetToCell = 20;
