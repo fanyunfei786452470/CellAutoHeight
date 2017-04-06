@@ -151,6 +151,18 @@
 
 - (void)configCellWithModel:(TextModel *)model {
     NSLog(@"配置数据");
+    [self.collect mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.descLabel.mas_bottom).offset(0);
+        make.size.mas_equalTo(CGSizeMake(50, 0));
+    }];
+    [self.like mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.descLabel.mas_bottom).offset(0);
+        make.size.mas_equalTo(CGSizeMake(50, 00));
+    }];
+    [self.comment mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.descLabel.mas_bottom).offset(0);
+        make.size.mas_equalTo(CGSizeMake(50, 00));
+    }];
     CGFloat w = [UIScreen mainScreen].bounds.size.width;
     
     [self.mainLabel setLineSpace:8 withLabelText:model.title withFont:[UIFont systemFontOfSize:15] withZspace:@1.5 Width:w - 20];
