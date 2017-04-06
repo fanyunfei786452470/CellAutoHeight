@@ -45,24 +45,24 @@ FOUNDATION_EXTERN NSString *const kFYFRecalculateForStateKey;
  *
  * - initWithStyle:reuseIdentifier:
  *
- * 且必须指定hyb_lastViewInCell才能生效
+ * 且必须指定fyf_lastViewInCell才能生效
  ************************************************************************/
 
 /**
  * 必传设置的属性，也就是在cell中的contentView内最后一个视图，用于计算行高
- * 例如，创建了一个按钮button作为在cell中放到最后一个位置，则设置为：self.hyb_lastVieInCell = button;
+ * 例如，创建了一个按钮button作为在cell中放到最后一个位置，则设置为：self.fyf_lastVieInCell = button;
  * 即可。
  * 默认为nil，如果在计算时，值为nil，会crash (弃用)
  */
 @property (nonatomic, strong) UIView *fyf_lastViewInCell;
 
 /**
- *  当距离分割线的视图不确定时，可以将可能的所有视图放在这个数组里面，优先级低于上面的属性，也就是当`hyb_lastViewInCell`有值时，`hyb_lastViewsInCell`不起作用。(弃用)
+ *  当距离分割线的视图不确定时，可以将可能的所有视图放在这个数组里面，优先级低于上面的属性，也就是当`fyf_lastViewInCell`有值时，`fyf_lastViewsInCell`不起作用。(弃用)
  */
 @property (nonatomic, strong) NSArray *fyf_lastViewsInCell;
 
 /**
- * 可选设置的属性，默认为0，表示指定的hyb_lastViewInCell到cell的bottom的距离
+ * 可选设置的属性，默认为0，表示指定的fyf_lastViewInCell到cell的bottom的距离
  * 默认为0.0
  */
 @property (nonatomic, assign) CGFloat fyf_bottomOffsetToCell;
